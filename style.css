@@ -50,7 +50,6 @@ body,html{
 }
 
 .filter-btn{
-    margin: 10px;
     cursor: pointer;
 }
 
@@ -75,4 +74,19 @@ body,html{
     padding:5px;
     width:200px;
     background-color: #f0f0f0;
+}
+
+.login-btn{
+   margin-right: 10px;
+   padding: 0px 15px;
+}
+
+.options{
+    margin: 10px;
+    display: flex;
+    gap: 25px;
+}
+
+.sear-box{
+    margin-right: 3px;
 }

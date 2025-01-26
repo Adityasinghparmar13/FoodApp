@@ -15,8 +15,8 @@ const Body = () => {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.6888636&lng=86.9660638&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         
         const json = await data.json()
-        setListRec(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setListSear(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setListRec(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setListSear(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     } 
 
     return ListRec.length == 0 ? (<Shimmer />) : (

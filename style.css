@@ -49,8 +49,9 @@ body,html{
     border: 1px solid black;
 }
 
-.sear{
-    padding: 10px;
+.filter-btn{
+    margin: 10px;
+    cursor: pointer;
 }
 
 .respic{

@@ -63,3 +63,16 @@ body,html{
     display: flex;
     flex-wrap: wrap;
 }
+
+.shim-cont{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shim-card{
+    height: 350px;
+    margin: 4px;
+    padding:5px;
+    width:200px;
+    background-color: #f0f0f0;
+}

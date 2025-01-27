@@ -27,10 +27,10 @@ const Body = () => {
                         setSearTxt(e.target.value)
                     }} />
                     <button className="sear-btn" onClick = {() => {
-                        const searList = ListRec.filter(
+                        const filterlist = ListRec.filter(
                             (res)=> res.info.name.toLowerCase().includes(SearTxt.toLowerCase())
                         )
-                        setListSear(searList)
+                        setListSear(filterlist)
                     }} >Search</button>
                 </div>
                  
@@ -38,7 +38,7 @@ const Body = () => {
                     const filterlist = ListRec.filter(
                         (res) => res.info.avgRating > 4.1
                     )
-                    setListRec(filterlist)
+                    setListSear(filterlist)
                 }}>
                 Top-Rated Restaurants
                  </button>

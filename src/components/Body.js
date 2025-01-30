@@ -1,6 +1,7 @@
 import RestCard from "./RestCard";
 import Shimmer from "./Shimmer";
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 
 const Body = () => {
     const [ListRec,setListRec] = useState([]);
@@ -19,7 +20,9 @@ const Body = () => {
         setListSear(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     } 
 
-    return ListRec.length == 0 ? (<Shimmer />) : (
+    if(ListRec.length === 0 ) return <Shimmer />;
+
+    return (
         <div className="body">
             <div className="options">
                 <div className="search">
@@ -45,7 +48,10 @@ const Body = () => {
             </div>
             <div className="restcont">
                 {ListSear.map((restaurant) => (
-                    <RestCard key={restaurant.info.id} resdata={restaurant}/>
+                    <Link style={{
+                        textDecoration: 'none',
+                        color: '#000',
+                      }} to={"/restaurants/" + restaurant.info.id}><RestCard key={restaurant.info.id} resdata={restaurant}/></Link>
                 ))}
             </div>   
         </div>
